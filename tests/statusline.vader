@@ -134,7 +134,7 @@ Execute (neomake#statusline#get: clears cache when changing disabled state):
   let bufnr = bufnr('%')
   AssertEqual neomake#statusline#get(bufnr, {}), '?'
   NeomakeDisableBuffer
-  AssertEqual neomake#statusline#get(bufnr, {}), 'b-'
+  AssertEqual neomake#statusline#get(bufnr, {}), 'b- ?'
   NeomakeToggleBuffer
   AssertEqual neomake#statusline#get(bufnr, {}), '?'
   bwipe
